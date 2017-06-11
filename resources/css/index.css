@@ -1,0 +1,352 @@
+/*Global rules*/
+
+html{
+	font-size: 16;
+	font-family: 'Lato', sans-serif;
+}
+
+p{
+	line-height: 1.5;
+}
+
+h1{
+	color: #5F001D;
+	font-size: 2.5rem;
+	font-weight: bold;
+}
+
+h2{
+	font-size: 2rem;
+}
+
+h3{
+	font-size: 1.5rem;
+}
+
+div, footer, header{
+	display: flex;
+}
+
+a{
+	font-size: 0.75rem;
+	text-decoration: none;
+	font-weight: bold;
+	color: #615A5C;
+	border: 1px solid #615A5C;	
+	border-radius: 10px;
+	padding: 0.5rem;
+	background-color: #E1DCDE;
+	transition-property: background-color border;
+  transition-duration: 750ms;
+}
+
+a:hover{
+	color: #fff;
+	border: 1px solid #5F001D;	
+	background-color: #5F001D;
+}
+
+
+.content{
+	flex-direction: column;
+	flex-wrap: wrap;
+	margin-right: 1rem;
+}
+
+.mobile{
+	display: none;
+}
+/*The main site sections are each within a container that spans the entire page*/
+
+.container{
+	flex-wrap: nowrap;
+	padding: 0rem 1.5rem;
+}
+
+.container, header, footer{
+	width: 100%;
+}
+
+/*Giving the dividing headers the required space*/
+body > h2{
+	padding: 2rem;
+	text-align: center;
+	background-color: #F9F8F9;
+	border-top: 2px solid #5F001D;
+	border-bottom: 2px solid #5F001D;
+}
+
+/*for the images and video they are all within a container for greater control*/
+
+.content img, .content video{
+	max-width: 100%;
+}
+
+.mainimage{
+	max-width: 60%;
+}
+
+.mainimage img, .mainimage video{
+	margin-bottom: 2rem;
+	margin-right: 1.5rem;
+}
+
+.banner .mainimage{
+	margin-top: 2rem;
+}
+
+.video{
+	margin: 0rem 0rem 1.5rem 1.5rem;
+}
+
+.logo, .course h3{
+	text-transform: uppercase;
+
+}
+
+
+.subsection > div, .course{
+	background: #F9F8F9;
+}
+
+
+
+/*Header and footer rules, together as many joint features*/
+
+header{
+	background-color: #F9F8F9;
+}
+
+footer{
+	color: #fff;
+	background-color: #3A1B24;
+}
+
+header, footer{
+	justify-content: space-between;
+	align-items: center;
+	height: 4rem;
+}
+
+header .logo, header nav, footer p, footer nav{
+	margin: 1.5rem
+}
+
+span{
+	color: #5F001D;
+}
+
+.logo img{
+	height: 3.5rem;
+}
+
+.logo{
+	align-items: center;
+}
+
+nav li{
+	display: inline;
+}
+
+
+
+/*Banner and thesis section rules, again mostly shared features*/
+
+.banner a{
+	font-size: 1.5rem;
+	padding: 1rem;
+	text-align: center;
+	color: #fff;
+	border: 1px solid #5F001D;	
+	background-color: #5F001D;
+}
+
+.banner a:hover{
+	color: #615A5C;
+	border: 1px solid #615A5C;	
+	background-color: #E1DCDE;
+}
+
+
+.banner a, .banner h1, .banner h2{
+	margin: 1rem;
+	padding: 1rem 0rem 1rem 1rem;
+}
+
+.banner{
+	align-items: center;
+}
+
+.banner .subsection{
+	max-width: 26.4rem;
+}
+
+.thesis{
+	padding-bottom: 2rem;
+}
+
+.thesis .subsection{
+	margin-top: 0.5rem;
+}
+
+.thesis h2{
+	margin-bottom: 0.5rem;
+}
+
+
+
+/*Infomation section rules*/
+
+.information{
+	margin-top: 2rem;
+}
+
+.information .subsection p{
+	padding: 0.5rem 0rem;
+}
+
+.information a{
+	width: 4rem;
+}
+
+.subsection{
+	width: 26.4rem;
+	justify-content: flex-start;
+}
+
+.information .mainimage h2{
+	padding-bottom: 0.5rem;
+}
+
+.imagecontainer{
+	max-width: 35%;
+}
+
+.imagecontainer img{
+	margin: 0rem 0rem 1rem 1rem;
+}
+
+.description{
+	justify-content: center;
+}
+
+em{
+	font-style: italic;
+}
+
+.information .mainimage p{
+	margin-bottom: 1rem;
+}
+
+
+
+/*Courses section rules*/
+
+.courses{
+	flex-wrap: wrap;
+	justify-content: center;
+}
+
+.course{
+	width: 25%;
+	padding: 1rem;
+}
+
+.course img{
+	margin-bottom: 1rem;
+}
+
+.course h3{
+	margin: 1.5rem 0rem;
+}
+
+
+
+/*Mobile version rules*/
+
+@media only screen and (max-width: 600px){
+
+	.logo h1, .desktop, .course{
+		display: none;
+	}
+
+	.mobile{
+		display: flex;
+	}
+
+	.courses .content, .banner .content{
+		width: 100%;
+	}
+
+	.banner p{
+		margin-right: 0rem;
+	}
+
+	.information .mainimage, .banner{
+		margin-right: 1rem;
+	}
+
+	.container, header{
+		justify-content: center;
+		align-items: center;
+		margin-left: 0rem;
+		padding: 0rem;
+	}
+
+	.mainimage video{
+		margin: 0rem;
+	}
+
+	.subsection > div {
+		flex-direction: column;
+		margin: 1rem 0rem;
+	}
+
+	.subsection, .courses ul, .subsection > div{
+		width: 100%;
+	}
+
+  div .imagecontainer, .thesis .mainimage{
+		max-width: 100%;
+		margin-right: 0rem;
+	}
+
+	.subsection p, .subsection h2{
+		margin-left: 2rem;
+	}
+
+	.banner{
+		margin-bottom: 1.5rem;
+	}
+
+	.courses, .banner, .subsection > div{
+		align-items: flex-start;
+	}
+
+	 .information a, .courses a{
+		display: inline-block;
+		padding: 1rem 0rem 1rem 1rem;
+	}
+
+		header a, header img{
+			background-color: unset;
+			border: none;
+	}
+
+		a:hover{
+			background-color: unset;
+			border:	none;
+	}
+
+	.information a{
+		width: 5rem;
+		margin-left: 1rem;
+	}
+
+	.courses a{
+		font-size: 1rem;
+		margin-bottom: 0.5rem;
+		width: 100%;
+	}
+
+}
